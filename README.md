@@ -1,1 +1,1 @@
-# index.html in css add, js add
+# Added css, js to index.html
