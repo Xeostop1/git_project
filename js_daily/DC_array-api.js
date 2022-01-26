@@ -74,3 +74,10 @@ console.log(result);
 
 
 // 6. 수업에 등록한 학생들만 골라서 추출
+
+
+let number =10
+console.log(number++);
+console.log(++number);
+console.log(++number);
+
