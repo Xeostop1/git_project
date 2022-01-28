@@ -74,10 +74,59 @@ console.log(result);
 
 
 // 6. 수업에 등록한 학생들만 골라서 추출
+{
+const result= student.filter((student)=> student.enrolled);
+console.log(result);
+
+}
+
+//7.배열에서 점수만 들어 있는배열
+const reselt= student.map((student)=> student.score);
+console.log(reselt);
+
+//8. 50점 보다 작은 학생 추출
+//some은 만족되는것이 있는지 없는지만 확인한다면 썸(1개 이상 있다면 투루로 출력)
+
+const reselt2 =student.some((student)=> student.score < 50);
+console.log(reselt2);
+
+//모든조건이 만족되야할때는 에브리 
+const reselt3= student.every((student)=> student.score>= 50)
+console.log(reselt3);
+
+//9.학생들의 평균값 
+// 리듀스(reduce) 배열각각을 돌면서 값을 누적할 때 사용 
+{const reselt4= student.reduce((prev, curr) =>{
+    console.log('--------------------');
+    console.log(prev);
+    console.log(curr);
+    return prev+curr.score;  
+
+},0);
+console.log(reselt4/student.length);//위의 결과에 렝스(모든 스튜던트의 갯수)을 나누면 평균간으
+
+}
 
 
-let number =10
-console.log(number++);
-console.log(++number);
-console.log(++number);
+//10. 모든 학생의 점수를 스트링으로 변환 필터는 그중에 50점 이상인 사람만 조인으로 묶음
+console.log('--------------------');
+
+{
+    const result =student.map((student)=> student.score)
+    .filter((score) => score>=50)
+    .join();
+    console.log(result);
+    
+}
+
+//11. 낮은 순서대로 정렬 a-b/ b-a는 높은순서대로 정렬
+console.log('--------------------');
+{
+    const reselt=student
+    .map(student=> student.score)
+    .sort((a,b)=> a-b)
+    .join();
+    console.log(reselt);
+    
+}
 
