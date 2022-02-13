@@ -139,6 +139,7 @@ console.log(fruits.lastIndexOf('🥗'));
  
  
 
+ console.log();
  
  
 
