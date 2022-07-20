@@ -1,1 +1,1 @@
-# git_project
+# Added css, js to index.html
